@@ -1,0 +1,77 @@
+============================================================
+   BÀI TẬP LỚN: XÂY DỰNG WEBSITE BÁN MÁY TÍNH (LAPTOPSHOP)
+   Môn học: Công nghệ phần mềm
+   Nhóm thực hiện: Nhóm 10
+============================================================
+
+1. THÔNG TIN THÀNH VIÊN
+------------------------------------------------------------
+- Bùi Thế Hoàng
+- Nguyễn Sỹ Quang Huy
+- Nguyễn Hà Phương
+- Nguyễn Thế Hạnh
+
+2. YÊU CẦU HỆ THỐNG (SYSTEM REQUIREMENTS)
+------------------------------------------------------------
+- Phần mềm: XAMPP (Phiên bản hỗ trợ PHP 7.4 trở lên).
+- Trình duyệt: Google Chrome
+- Cơ sở dữ liệu: MySQL (MariaDB).
+
+3. HƯỚNG DẪN CÀI ĐẶT (INSTALLATION)
+------------------------------------------------------------
+Bước 1: Giải nén
+   - Copy thư mục "QL_BanMayTinh" vào thư mục "htdocs" của XAMPP.
+   - Đường dẫn chuẩn: C:\xampp\htdocs\QL_BanMayTinh
+
+Bước 2: Cấu hình Cơ sở dữ liệu
+   - Mở XAMPP Control Panel -> Start Apache và MySQL.
+   - Truy cập: http://localhost/phpmyadmin/
+   - Tạo một Database mới tên là: "LaptopShop" (Chọn utf8mb4_general_ci).
+   - Chọn Database vừa tạo -> Bấm tab "Import" (Nhập).
+   - Chọn file "laptopshop.sql" nằm trong thư mục code -> Bấm Go (Thực hiện).
+
+Bước 3: Kiểm tra cấu hình
+   - Mở file: /config/db.php
+   - Đảm bảo thông tin kết nối đúng:
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $dbname = "LaptopShop";
+
+Bước 4: Chạy Website
+   - Trang Khách hàng: http://localhost/QL_BanMayTinh/index_backup.php
+   - Trang Quản trị:   http://localhost/QL_BanMayTinh/admin/index_dashboard.php
+
+4. TÀI KHOẢN ĐĂNG NHẬP (CREDENTIALS)
+------------------------------------------------------------
+Để kiểm tra chức năng, vui lòng sử dụng các tài khoản demo sau:
+
+A. QUẢN TRỊ VIÊN (ADMIN) - Full quyền
+   - Email:    admin@gmail.com
+   - Mật khẩu: 123456
+   *Chức năng: Quản lý sản phẩm, đơn hàng, người dùng, xem báo cáo.*
+
+B. KHÁCH HÀNG (USER)
+   - Email:    khach@gmail.com
+   - Mật khẩu: 123456
+   *Chức năng: Tìm kiếm, thêm giỏ hàng, đặt hàng, xem lịch sử đơn.*
+
+5. CẤU TRÚC THƯ MỤC
+------------------------------------------------------------
+/admin          : Chứa mã nguồn trang quản trị
+  /modules      : Các chức năng con (Sản phẩm, Đơn hàng, User)
+  /includes     : Header, Footer, Sidebar, CSS Admin
+/assets         : Chứa CSS, JS, Hình ảnh (img)
+/config         : File cấu hình kết nối Database
+/uploads        : Thư mục chứa ảnh upload
+index_backup.php: Trang chủ
+...             : Các file chức năng khác.
+
+6. GHI CHÚ KHÁC
+------------------------------------------------------------
+- Nếu không upload được ảnh,hãy kiểm tra quyền ghi (write permission) của thư mục assets/img.
+- Các đơn hàng demo đã có sẵn trong Database để test thống kê.
+
+7. CẦN UPDATE
+- Trang xem thông tin chi tiết cập nhật sản phâm(do ai, thời gian)
+- Hệ thống chỉ cho 1 cửa hàng, chưa thích ứng với một chuỗi

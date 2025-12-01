@@ -1,0 +1,46 @@
+.admin-btn-main,
+.admin-btn-primary,
+.admin-btn-secondary {
+    border-radius: 8px;
+    box-shadow: none !important;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Nút chính (Thêm mới, Tìm kiếm) */
+.admin-btn-main,
+.admin-btn-primary {
+    background: #2563eb;
+    border: 1px solid #2563eb;
+    color: #ffffff;
+}
+
+.admin-btn-main:hover,
+.admin-btn-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* Nút phụ (Hủy lọc) */
+.admin-btn-secondary {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    color: #111827;
+}
+
+.admin-btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+/* Ô input + icon tìm kiếm */
+.table .input-group-text,
+.table .form-control,
+.input-group-text,
+.form-control {
+    border-radius: 8px !important;
+}

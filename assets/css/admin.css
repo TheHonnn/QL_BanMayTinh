@@ -1,0 +1,133 @@
+/* =========================================
+   ADMIN UI - LUXURY & MODERN STYLE
+   ========================================= */
+
+/* 1. CẤU HÌNH CHUNG (FONTS & COLORS) */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --font-main: 'Manrope', sans-serif;
+    --primary: #6366f1;       /* Tím Indigo hiện đại */
+    --primary-dark: #4f46e5;
+    --secondary: #64748b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --bg-body: #f3f4f6;       /* Xám khói sáng */
+    --bg-card: #ffffff;
+    --text-dark: #1e293b;
+    --text-gray: #64748b;
+    --shadow-card: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.025);
+    --radius: 12px;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    font-size: 0.92rem;
+}
+
+/* 2. BẢNG DỮ LIỆU (TABLE) - PHẦN QUAN TRỌNG NHẤT CHO TRANG ORDER */
+.table-responsive {
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    /* Tạo bóng mờ cho bảng nổi lên */
+    box-shadow: var(--shadow-card); 
+    padding: 10px;
+}
+
+.table {
+    margin-bottom: 0;
+    border-collapse: separate; /* Tách dòng để bo góc */
+    border-spacing: 0;
+}
+
+.table thead th {
+    background-color: #f8fafc;
+    color: var(--text-gray);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 16px 24px;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fafc; /* Hiệu ứng hover dòng */
+    transform: scale(1.005);    /* Phóng to cực nhẹ khi di chuột */
+}
+
+.table tbody td {
+    padding: 16px 24px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* Bo góc dòng cuối cùng */
+.table tbody tr:last-child td:first-child { border-bottom-left-radius: var(--radius); }
+.table tbody tr:last-child td:last-child { border-bottom-right-radius: var(--radius); }
+
+/* 3. TRẠNG THÁI (BADGE) */
+/* Thiết kế dạng viên thuốc mềm mại */
+.badge {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+}
+
+/* Màu sắc badge nhạt (Trendy Style) */
+.bg-secondary.bg-opacity-10 { background-color: #f1f5f9 !important; color: #475569 !important; }
+.bg-primary.bg-opacity-10 { background-color: #e0e7ff !important; color: #4338ca !important; }
+.bg-success.bg-opacity-10 { background-color: #d1fae5 !important; color: #065f46 !important; }
+.bg-danger.bg-opacity-10 { background-color: #fee2e2 !important; color: #991b1b !important; }
+
+/* 4. NÚT BẤM (BUTTONS) */
+.btn-sm {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* 5. SIDEBAR & LAYOUT (Dành cho khung bao ngoài) */
+.wrapper { display: flex; min-height: 100vh; }
+.sidebar {
+    min-width: 260px;
+    background: #0f172a; /* Đen xanh */
+    color: #94a3b8;
+}
+.sidebar a {
+    padding: 12px 24px;
+    display: block;
+    color: inherit;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: 0.3s;
+}
+.sidebar a:hover, .sidebar a.active {
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    border-left-color: var(--primary);
+}
